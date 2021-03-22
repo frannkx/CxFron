@@ -3,10 +3,10 @@
      class Conexion{
 
                // Variables
-               private $host = 'localhost';
+               private $host = '172.20.0.3';
                private $db = 'cx';
                private $user = 'admin';
-               private $pass = 'dbP4$$w0rd';
+               private $pass = 'secret';
 
           public function get_conexion(){
                

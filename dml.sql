@@ -7,19 +7,17 @@
 
 /*CREATE DATABASE base_cifrada DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;*/
 
-CREATE DATABASE CX DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+/*CREATE DATABASE CX DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci;*/
 
-/*
-ALTER TABLE `general` COLLATE='utf8_general_ci';
+/*ALTER TABLE `general` COLLATE='utf8_general_ci';*/
 
-mysqldump -u admin -p --default-character-set=utf8 cx general > general.sql
+/*mysqldump -u admin -p --default-character-set=utf8 cx general > general.sql*/
 
-mysql -p cx < general.sql
+/*mysql -p cx < general.sql*/
 
-ALTER TABLE general DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci ;
+/*ALTER TABLE general DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci ;*/
 
-Referencia
-https://softwareyotrasdesvirtudes.com/2012/10/09/como-modificar-tablas-a-utf8-mysql/*/
+/*Referencia: https://softwareyotrasdesvirtudes.com/2012/10/09/como-modificar-tablas-a-utf8-mysql/*/
 
 /* Export database */
 /* mysqldump --user=root --password="" bitnami_wordpress > bitnami_wordpress.sql
@@ -53,6 +51,7 @@ SELECT user, host FROM mysql.user;
 /////////////////// Creacion de Tablas //////////////////////
 /////////////////////////////////////////////////////////////
 */
+use cx;
 
 CREATE TABLE GENERAL (
     CUENTA_MADRE varchar(255),
@@ -70,7 +69,7 @@ CREATE TABLE GENERAL (
     SEGMENTO varchar(255),
     TIPO_CLIENTE varchar(255),
     SM varchar(255),
-    KAM varchar(255),
+    KAM varchar(255)
 );
 
 /*
