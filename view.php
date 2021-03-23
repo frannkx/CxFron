@@ -1,10 +1,10 @@
 <?php
 
 //Variables
-$hostDB = '172.20.0.2';
-$nombreDB = 'cx';
-$usuarioDB = 'admin';
-$contrasenyaDB = 'secret';
+$hostDB = $_ENV["WEB_DB_HOST"];
+$nombreDB = $_ENV["WEB_DB"];
+$usuarioDB = $_ENV["WEB_DB_USER"];
+$contrasenyaDB = $_ENV["WEB_DB_PASSWORD"];
 // Conecta con base de datos
 $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
